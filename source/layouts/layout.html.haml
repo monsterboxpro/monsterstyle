@@ -13,10 +13,11 @@
   %body{ class: "#{page_classes}", ng:{app: 'app'} }
     .container
       .wrapper
-        .content
-          = yield
-          = partial 'column'
-          .clear
+        .content_wrap
+          .content
+            = yield
+            = partial 'column'
+            .clear
     <script src="//codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="//codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
