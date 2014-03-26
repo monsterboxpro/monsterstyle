@@ -4,11 +4,15 @@
 .samples
   .preview
     = partial 'code/basic_table'
-  .code
-    %pre.highlight
-      %code
-        = h partial('code/basic_table')
-  .code
-    %pre.highlight
-      %code
-        = h partial('code/style_basic_table')
+  .codes
+    .toggle
+      .button.active{data:{action:'html'}} HTML
+      .button{data:{action:'sass'}} SASS
+      .clear
+    .clear
+    .code{data:{action:'html'}}
+      %pre.highlight
+        %code= h partial('code/basic_table')
+    .code{data:{action:'sass'}}
+      %pre.highlight
+        %code= h partial('code/style_basic_table')
