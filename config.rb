@@ -16,12 +16,7 @@ activate :deploy do |deploy|
   deploy.password = 'scroll_SMB1'
 end
 
-activate :blog do |blog|
-  blog.prefix = 'blog'
-end
-
 configure :build do
-  activate :blog
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
