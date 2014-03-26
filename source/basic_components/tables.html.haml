@@ -1,18 +1,29 @@
 .page_heading
   .page_title Tables
 
-.samples
-  .preview
-    = partial 'code/basic_table'
-  .codes
-    .toggle
-      .button.active{data:{action:'html'}} HTML
-      .button{data:{action:'sass'}} SASS
-      .clear
+%a.subtitle{href: '#variables'}
+  %h3
+    %span Variables
+    %span.fa.fa-link
+%a.subtitle{href: '#mixins'}
+  %h3
+    %span Mixins
+    %span.fa.fa-link
+%a.subtitle{href: '#examples'}
+  %h3
+    %span Examples
+    %span.fa.fa-link
+= partial 'code/basic_table'
+.codes
+  .toggle
+    .button.active{data:{action:'html'}} HTML
+    .button{data:{action:'sass'}} SASS
     .clear
-    .code{data:{action:'html'}}
-      %pre.highlight
-        %code= h partial('code/basic_table')
-    .code{data:{action:'sass'}}
-      %pre.highlight
-        %code= h partial('code/style_basic_table')
+  .clear
+  .code.active{data:{action:'html'}}
+    %pre.highlight
+      %code= h partial('code/basic_table')
+  .code{data:{action:'sass'}}
+    %pre.highlight
+      %code= h partial('code/style_basic_table')
+ 

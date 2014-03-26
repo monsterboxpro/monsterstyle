@@ -7,10 +7,26 @@
   :padding
     :right 200px
   .content
-    :margin 0 3rem
+    :margin 0 6rem
+
+
+.header
+  :padding 1rem
+
+a.logo
+  .icon
+    :display inline-block
+    :width 24px
+    :height 24px
+    :background url(../images/logo.png) no-repeat
+  :color rgb(173,173,173)
+  span
+    :vertical-align middle
+  &:hover
+    :text-decoration none
 
 .page_heading
-  :padding 2rem 0
+  :padding 1rem 0
     :bottom 1.6rem
   :margin 1rem 0
   :text-align center
@@ -20,30 +36,24 @@
     :font-weight 300
     :font-size 2.8rem
     :color rgb(100,100,100)
-
-.column
-  :background rgb(240,240,240)
-  :width 200px
-  :position fixed
-  :top 0
-  :right 0
-  :height 100%
-  .group .title
-    :font-weight 700
-    :padding 0.8rem 1rem
-      :bottom 0.4rem
-  a
-    :display block
+a.subtitle
+  :color rgb(100,100,100)
+  :text-decoration none
+  &:hover
+    :text-decoration none
+    span.fa
+      :color rgb(80,80,80)
+  h3
+    :font-weight 300
+    :font-size 1.3rem
     :color rgb(100,100,100)
-    :padding 0.5rem 1rem
-    &:hover
-      :text-decoration none
-      :color rgb(0,0,0)
-      :background rgb(220,220,220)
-    &.active
-.basic_components_buttons_index
-  .button, a.button
-    +button($color_info)
+    :margin
+      :top 2.4rem
+      :bottom 2rem
+    span.fa
+      :font-size 0.9rem
+      :float right
+      :color rgb(200,200,200)
 
 input
   :margin 0
@@ -64,63 +74,3 @@ table
   +form_radio_button
 .button_group
   +button_group
-.basic_components_tables_index
-  .samples
-    :margin
-      :bottom 1rem
-    .preview
-      :border solid 1px rgb(200,200,200)
-    .preview, .code
-      :padding 1rem
-    .codes
-      .toggle
-        :background rgb(230,230,230)
-        :padding 0.6rem
-        :border
-          :bottom solid 1px rgb(200,200,200)
-        .button
-          :cursor pointer
-          :display inline-block
-          :float left
-          :padding 0.6rem 1rem
-          :color rgb(100,100,100)
-          :font-weight 700
-          &:hover
-            :color rgb(60,60,60)
-          &.active
-            :color rgb(200,0,0)
-      :border solid 1px rgb(200,200,200)
-        :top none
-      :background rgb(248, 248, 248)
-      :position relative
-      .code
-        :background rgb(248, 248, 248)
-        :border
-          :top none
-
-= active_page
-  :color rgb(255,255,255)
-  :background rgb(200,0,0)
-
-body.configuration_variables_index .column a.variables
-  +active_page
-body.basic_components_forms_index .column a.forms
-  +active_page
-body.basic_components_buttons_index .column a.buttons
-  +active_page
-body.basic_components_tables_index .column a.tables
-  +active_page
-body.basic_components_images_index .column a.images
-  +active_page
-body.complex_components_dropdowns_index .column a.dropdowns
-  +active_page
-body.complex_components_button_groups_index .column a.button_groups
-  +active_page
-body.complex_components_button_dropdowns_index .column a.button_dropdowns
-  +active_page
-body.complex_components_input_groups_index .column a.input_groups
-  +active_page
-body.complex_components_navs_index .column a.navs
-  +active_page
-body.complex_panels_index .column a.panels
-  +active_page
