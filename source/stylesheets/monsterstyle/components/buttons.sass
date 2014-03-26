@@ -2,7 +2,7 @@
   :cursor pointer
   :display inline-block
   :background-color $color_theme
-  :color contrast-color($color_theme, $color_text, invert($color_text), 30%)
+  :color contrast-color($color_theme, $color_text, invert($color_text), 80%)
   :text-decoration none
   :text-align center
   :font-weight $button_font_weight
@@ -10,8 +10,9 @@
   :outline none
   +border-radius(3px)
   :font-size $button_font_size
-  :padding $button_font_padding
+  :padding $button_padding
   &:hover
+    :text-decoration none
     :background-color lighten($color_theme, 20%)
   &:active, &.active
     :background-color lighten($color_theme, 20%)
