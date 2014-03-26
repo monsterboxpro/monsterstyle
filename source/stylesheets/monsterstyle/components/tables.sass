@@ -1,39 +1,32 @@
 = table 
-  background: $table-bg
-  margin-bottom: $table-margin-bottom
-  border: $table-border-style $table-border-size $table-border-color
-
-  thead,
-  tfoot 
-    background: $table-head-bg    
-
+  :background     $table_bg
+  :margin-bottom  $table_margin_bottom
+  :border         $table_border_style $table_border_size $table_border_color
+  thead, tfoot 
+    :background $table_head_bg    
     tr 
-      th,
-      td 
-        padding: $table-head-padding
-        font-size: $table-head-font-size
-        font-weight: $table-head-font-weight
-        color: $table-head-font-color
-        text-align: $default-float
+      th, td 
+        :padding      $table_head_padding
+        :font-size    $table_head_font_size
+        :font-weight  $table_head_font_weight
+        :color        $table_head_font_color
+        :text-align   $default_float
   tr 
-    th,
-    td 
-      padding: $table-row-padding
-      font-size: $table-row-font-size
-      color: $table-row-font-color
-
+    th,td 
+      :padding    $table_row_padding
+      :font-size  $table_row_font_size
+      :color      $table_row_font_color
     &.even,
     &.alt,
     &:nth-of-type(even)  
-      background: $table-even-row-bg 
+      :background $table_even_row_bg 
 
   thead tr th,
   tfoot tr th,
   tbody tr td,
   tr td,
   tfoot tr td  
-    display: $table-display 
-    line-height: $table-line-height 
+    :line-height $table_line_height 
 
 
 
