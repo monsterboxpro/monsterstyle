@@ -31,22 +31,46 @@
   .group .title
     :font-weight 700
     :padding 0.8rem 1rem
-      :bottom 0rem
+      :bottom 0.4rem
   a
     :display block
     :color rgb(100,100,100)
-    :padding 0.3rem 1rem
-    :margin 0.2rem 0rem
+    :padding 0.5rem 1rem
     &:hover
       :text-decoration none
       :color rgb(0,0,0)
       :background rgb(220,220,220)
     &.active
-      :border
-        :left solid 5px rgb(0,0,0)
 .button, a.button
   +button($color_info)
 input
   :margin 0
 table
   +table
+
+= active_page
+  :color rgb(255,255,255)
+  :background rgb(200,0,0)
+
+body.configuration_variables_index .column a.variables
+  +active_page
+body.basic_components_forms_index .column a.forms
+  +active_page
+body.basic_components_buttons_index .column a.buttons
+  +active_page
+body.basic_components_tables_index .column a.tables
+  +active_page
+body.basic_components_images_index .column a.images
+  +active_page
+body.complex_components_dropdowns_index .column a.dropdowns
+  +active_page
+body.complex_components_button_groups_index .column a.button_groups
+  +active_page
+body.complex_components_button_dropdowns_index .column a.button_dropdowns
+  +active_page
+body.complex_components_input_groups_index .column a.input_groups
+  +active_page
+body.complex_components_navs_index .column a.navs
+  +active_page
+body.complex_panels_index .column a.panels
+  +active_page
