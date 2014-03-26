@@ -7,7 +7,7 @@
   :padding
     :right 200px
   .content
-    :margin 0 3rem
+    :margin 0 6rem
 
 .page_heading
   :padding 2rem 0
@@ -45,6 +45,25 @@
   .button, a.button
     +button($color_info)
 
+a.subtitle
+  :color rgb(100,100,100)
+  :text-decoration none
+  &:hover
+    :text-decoration none
+    span.fa
+      :color rgb(80,80,80)
+  h3
+    :font-weight 300
+    :font-size 1.3rem
+    :color rgb(100,100,100)
+    :margin
+      :top 2.4rem
+      :bottom 2rem
+    span.fa
+      :font-size 0.9rem
+      :float right
+      :color rgb(200,200,200)
+
 input
   :margin 0
 table
@@ -64,41 +83,37 @@ table
   +form_radio_button
 
 .basic_components_tables_index
-  .samples
+  .codes
     :margin
       :bottom 1rem
-    .preview
-      :border solid 1px rgb(200,200,200)
-    .preview, .code
+    .code
       :padding 1rem
-    .codes
-      .toggle
-        :background rgb(230,230,230)
-        :padding 0.6rem
-        :border
-          :bottom solid 1px rgb(200,200,200)
-        .button
-          :cursor pointer
-          :display inline-block
-          :float left
-          :padding 0.6rem 1rem
-          :color rgb(100,100,100)
-          :font-weight 700
-          &:hover
-            :color rgb(60,60,60)
-          &.active
-            :color rgb(200,0,0)
-      :border solid 1px rgb(200,200,200)
-        :top none
-      :background rgb(248, 248, 248)
-      :position relative
-      .code
-        :background rgb(248, 248, 248)
-        :border
-          :top none
-        :display none
+    .toggle
+      :background rgb(230,230,230)
+      :padding 0.6rem
+      :border
+        :bottom solid 1px rgb(200,200,200)
+      .button
+        :cursor pointer
+        :display inline-block
+        :float left
+        :padding 0.6rem 1rem
+        :color rgb(100,100,100)
+        :font-weight 700
+        &:hover
+          :color rgb(60,60,60)
         &.active
-          :display block
+          :color rgb(200,0,0)
+    :border solid 1px rgb(200,200,200)
+    :background rgb(248, 248, 248)
+    :position relative
+    .code
+      :background rgb(248, 248, 248)
+      :border
+        :top none
+      :display none
+      &.active
+        :display block
 
 = active_page
   :color rgb(255,255,255)
