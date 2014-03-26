@@ -94,6 +94,30 @@ $base-font-size       : 16px
 $base-line-height     : 20px
 $side-gutter-width    : 0px
 
+
+.column
+  :background rgb(240,240,240)
+  :width 200px
+  :position fixed
+  :top 0
+  :left 0
+  :height 100%
+  .group .title
+    :font-weight 700
+    :padding 0.4rem 1rem
+    :background rgb(230,230,230)
+    :border
+      :bottom solid 1px rgb(210,210,210)
+  a
+    :display block
+    :color rgb(100,100,100)
+    :padding 0.6rem 1rem
+    &:hover
+      :text-decoration none
+      :color rgb(0,0,0)
+      :background rgb(230,230,250)
+
+
 @media #{$small-only}
 @media #{$small-up}
 @media #{$medium-up}
