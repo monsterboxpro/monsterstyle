@@ -1,0 +1,25 @@
+= button_group
+  +button
+  &:first-child:not(:last-child)
+    :padding
+      :right 0 !important
+    :margin
+      :right 0 !important
+    :border-top-left-radius $button_group_radius
+    :border-bottom-left-radius $button_group_radius
+  &:not(:first-child):not(:last-child)
+    :padding
+      :left 0 !important
+      :right 0 !important
+    :margin
+      :left 0 !important
+      :right 0 !important
+    :border-radius 0px
+  &:last-child:not(:first-child)
+    :padding
+      :left 0 !important
+    :margin
+      :left 0 !important
+    :border-top-right-radius $button_group_radius
+    :border-bottom-right-radius $button_group_radius
+
