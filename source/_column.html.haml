@@ -1,9 +1,9 @@
 .column
   .toggle
-    .button{data:{action:'toc'}} TOC
-    .button.active{data:{action:'search'}} Search
+    .button.active{data:{action:'toc'}} TOC
+    .button{data:{action:'search'}} Search
     .clear
-  .section.toc{data:{action:'toc'}}
+  .section.toc.active{data:{action:'toc'}}
     .group
       .title Getting Started
       %a.about{href: '/'} About
@@ -27,7 +27,7 @@
       %a.panels{href: '/complex_components/panels/'} Panels
     .group
       .title Examples
-  .section.search.active{data:{action:'search'}}
+  .section.search{data:{action:'search'}}
     .search_field
       %span.fa.fa-search
       %input{ type: 'text' }
