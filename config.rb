@@ -24,8 +24,8 @@ configure :build do
 end
 
 helpers do
-  def section &block
-    content = capture &block
+  def section name, &block
+    content = capture(&block) if block
     partial 'section', locals: { content: content, name: name }
   end
 
