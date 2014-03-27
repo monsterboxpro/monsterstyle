@@ -1,34 +1,18 @@
 .page_heading
   .page_title Input Groups
 
-.label
-  Text Field and Button
-.input_group
-  %input{type: 'text'}
-  %button.input_button_group{type: 'button'}
-    Submit
-.clear
+= section :variables do
+  = row '$something', 'real_good', 'aight aight'
 
-.label
-  Checkbox, Text Field and Button
-.input_group
-  .input_selector_group_label
-    Check
-  .input_checkbox_group
-    %input{type: 'checkbox'}
-  %input{type: 'text'}
-  %button.input_button_group{type: 'button'}
-    Submit
+= section :mixins do
+  = row 'something', 'real_good', 'aight aight'
 
-.clear
-.label
-  Radio Buttons
-.input_group
-  .input_radio_group
-    %input{type: 'radio'}
-  .input_selector_group_label
-    One
-  %input{type: 'text'}
-  %button.input_button_group{type: 'button'}
-    Submit
+= section :examples
 
+.example
+  = partial 'codes/html/input_groups'
+  .clear
+
+= codes :html, :sass do
+  = code :html, :button_dropdown
+  = code :sass, :button_dropdown
