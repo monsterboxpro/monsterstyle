@@ -1,2 +1,28 @@
 .page_heading
   .page_title Input Groups
+
+.input_group
+  .label
+    Text Field
+  %input{type: 'text'}
+  %button.input_button_group{type: 'button'}
+    Submit
+.clear
+
+.input_group
+  .label
+    Checkboxes
+  .input_checkbox_group
+    %input{type: 'checkbox'}
+  %input{type: 'text'}
+  %button.input_button_group{type: 'button'}
+    Submit
+
+.clear
+.radio_button
+  .label
+    Radio Buttons
+  %input{type: 'radio'}
+    One
+  %input{type: 'radio'}
+    Two
