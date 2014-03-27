@@ -1,6 +1,17 @@
 .page_heading
   .page_title Buttons
 
+= section :variables do
+  = row '$button_font_weight', 'normal', 'button font weight'
+  = row '$button_font_size'  , 'ms(0)' , 'button font size'
+  = row '$button_padding'    , 'ms(-1)', 'button padding'
+
+= section :mixins do
+  = row 'button', '$color_theme', 'button styling'
+
+.example
+  = partial 'code/buttons'
+
 .button
   Button
 %a.button
@@ -9,6 +20,3 @@
   Button
 %input.button{type: 'submit', value: 'Input Submit'}
 
-%pre.highlight
-  %code
-    = h "<div class='testing'>Testing</div>"

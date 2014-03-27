@@ -34,4 +34,15 @@ helpers do
                              extra: extra,
                              desc: desc }
   end
+
+  def codes *names, &block
+    content = capture(&block) if block
+    partial 'codes', locals: {names: names,
+                              content: content}
+  end
+
+  def code lang, name
+    partial 'code', locals: {lang: lang,
+                             name: name}
+  end
 end

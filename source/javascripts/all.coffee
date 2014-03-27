@@ -1,4 +1,7 @@
 $ ->
+  $('.codes .toggle .button:first').addClass 'active'
+  $('.codes .code:first').addClass 'active'
+
   $('pre.highlight code').each (i, e)->
     hljs.highlightBlock e
   $('.codes .toggle .button').click ->
