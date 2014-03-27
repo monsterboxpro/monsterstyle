@@ -1,11 +1,17 @@
 .page_heading
   .page_title Button Dropdowns
-.button_dropdown
-  %ul
-    %li
-      %a Omen King
-    %li
-      %a Prizma
-    %li
-      %a TotakaRock
+= section :examples
 
+= section :variables do
+  = row '$something', 'real_good', 'aight aight'
+
+= section :mixins do
+  = row 'something', 'real_good', 'aight aight'
+
+.example
+  = partial 'codes/html/button_dropdown'
+  .clear
+
+= codes :html, :sass do
+  = code :html, :button_dropdown
+  = code :sass, :button_dropdown
