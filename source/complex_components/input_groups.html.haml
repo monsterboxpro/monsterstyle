@@ -1,17 +1,19 @@
 .page_heading
   .page_title Input Groups
 
+.label
+  Text Field and Button
 .input_group
-  .label
-    Text Field
   %input{type: 'text'}
   %button.input_button_group{type: 'button'}
     Submit
 .clear
 
+.label
+  Checkbox, Text Field and Button
 .input_group
-  .label
-    Checkboxes
+  .input_selector_group_label
+    Check
   .input_checkbox_group
     %input{type: 'checkbox'}
   %input{type: 'text'}
@@ -19,10 +21,14 @@
     Submit
 
 .clear
-.radio_button
-  .label
-    Radio Buttons
-  %input{type: 'radio'}
+.label
+  Radio Buttons
+.input_group
+  .input_radio_group
+    %input{type: 'radio'}
+  .input_selector_group_label
     One
-  %input{type: 'radio'}
-    Two
+  %input{type: 'text'}
+  %button.input_button_group{type: 'button'}
+    Submit
+
