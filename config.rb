@@ -22,3 +22,16 @@ configure :build do
   activate :asset_hash
   activate :relative_assets
 end
+
+helpers do
+  def section &block
+    content = capture &block
+    partial 'section', locals: { content: content, name: name }
+  end
+
+  def row name, extra, desc
+    partial 'row', locals: { name: name,
+                             extra: extra,
+                             desc: desc }
+  end
+end
