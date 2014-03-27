@@ -5,6 +5,28 @@
   :top 0
   :right 0
   :height 100%
+  :padding
+    :top 60px
+  .toggle
+    :position absolute
+    :top 0
+    :left 0
+    :width 100%
+    :margin
+      :bottom 1rem
+    .button
+      :cursor pointer
+      :float left
+      :width 50%
+      :display inline-block
+      :background rgb(200,200,200)
+      :text-align center
+      :padding 1rem 0
+      &:hover
+        :background rgb(210,210,210)
+      &.active
+        :color rgb(255,255,255)
+        :background rgb(100,100,100)
   .group .title
     :font-weight 700
     :padding 0.8rem 1rem
@@ -18,7 +40,10 @@
       :color rgb(0,0,0)
       :background rgb(220,220,220)
     &.active
-
+  .section
+    :display none
+    &.active
+      :display block
 = active_page
   :color rgb(255,255,255)
   :background rgb(200,0,0)

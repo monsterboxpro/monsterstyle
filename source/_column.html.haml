@@ -1,24 +1,31 @@
 .column
-  .group
-    .title Getting Started
-    %a.about{href: '/'} About
-    %a.install{href: '/getting_started/install'} How to Install
-  .group
-    .title Configuration
-    %a.variables{href: '/configuration/variables/'} Variables
-  .group
-    .title Basic Components
-    %a.forms{href: '/basic_components/forms/'}   Forms
-    %a.buttons{href: '/basic_components/buttons/'} Buttons
-    %a.tables{href: '/basic_components/tables/'}  Tables
-    %a.images{href: '/basic_components/images/'} Images
-  .group
-    .title Complex Components
-    %a.dropdowns{href: '/complex_components/dropdowns/'} Dropdowns
-    %a.button_groups{href: '/complex_components/button_groups/'} Button groups
-    %a.button_dropdowns{href: '/complex_components/button_dropdowns/'} Button dropdowns
-    %a.input_groups{href: '/complex_components/input_groups/'} Input groups
-    %a.navs{href: '/complex_components/navs/'} Navs
-    %a.panels{href: '/complex_components/panels/'} Panels
-  .group
-    .title Examples
+  .toggle
+    .button.active{data:{action:'toc'}} TOC
+    .button{data:{action:'search'}} Search
+    .clear
+  .section.toc.active{data:{action:'toc'}}
+    .group
+      .title Getting Started
+      %a.about{href: '/'} About
+      %a.install{href: '/getting_started/install'} How to Install
+    .group
+      .title Configuration
+      %a.variables{href: '/configuration/variables/'} Variables
+    .group
+      .title Basic Components
+      %a.forms{href: '/basic_components/forms/'}   Forms
+      %a.buttons{href: '/basic_components/buttons/'} Buttons
+      %a.tables{href: '/basic_components/tables/'}  Tables
+      %a.images{href: '/basic_components/images/'} Images
+    .group
+      .title Complex Components
+      %a.dropdowns{href: '/complex_components/dropdowns/'} Dropdowns
+      %a.button_groups{href: '/complex_components/button_groups/'} Button groups
+      %a.button_dropdowns{href: '/complex_components/button_dropdowns/'} Button dropdowns
+      %a.input_groups{href: '/complex_components/input_groups/'} Input groups
+      %a.navs{href: '/complex_components/navs/'} Navs
+      %a.panels{href: '/complex_components/panels/'} Panels
+    .group
+      .title Examples
+  .section.search{data:{action:'search'}}
+    Searching
