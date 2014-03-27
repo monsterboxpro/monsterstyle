@@ -1,25 +1,36 @@
 = button_group($color_theme)
-  +button($color_theme)
-  &:first-child:not(:last-child)
-    :padding
-      :right 0 !important
-    :margin
-      :right 0 !important
-    :border-top-left-radius $button_group_radius
-    :border-bottom-left-radius $button_group_radius
-  &:not(:first-child):not(:last-child)
-    :padding
-      :left 0 !important
-      :right 0 !important
-    :margin
-      :left 0 !important
-      :right 0 !important
-    :border-radius 0px
-  &:last-child:not(:first-child)
-    :padding
-      :left 0 !important
-    :margin
-      :left 0 !important
-    :border-top-right-radius $button_group_radius
-    :border-bottom-right-radius $button_group_radius
+  :margin ms(-1)
+  .button
+    :cursor pointer
+    :display inline-block
+    :background-color $color_theme
+    //:color contrast-color($color_theme, darken($color_theme, 50%), invert(darken($color_theme, 50%)), 60%)
+    :color contrast-color($color_theme, darken($color_theme, 45%), lighten($color_theme, 50%), 60%)
+    :text-decoration none
+    :text-align center
+    :font-weight $button_font_weight
+    :border none
+    :outline none
+    :margin 0
+    :line-height $button_font_size
+    //+border-radius(3px)
+    :font-size $button_font_size
+    :padding $button_padding
+    :vertical-align middle
+    :float left
+    &:hover
+      :text-decoration none
+      :background-color lighten($color_theme, 20%)
+    &:active, &.active
+      :background-color lighten($color_theme, 20%)
+      +box-shadow(rgba(0,0,0,0.25) 0px 2px 8px inset)
+      :border-radius 0
+    &:first-child
+      :border-top-left-radius $button_group_radius
+      :border-bottom-left-radius $button_group_radius
+    &:not(:first-child):not(:last-child)
+      :border-radius 0px
+    &:last-child
+      :border-top-right-radius $button_group_radius
+      :border-bottom-right-radius $button_group_radius
 
