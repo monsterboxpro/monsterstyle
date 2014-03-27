@@ -1,116 +1,31 @@
 .page_heading
   .page_title Tables
 
-%a.subtitle{href: '#variables'}
-  %h3
-    %span Variables
-    %span.fa.fa-link
+= section :variables do
+  = row '$table_bg'              , '$color_background'              , 'table background color'
+  = row '$table_even_row_bg'     , 'darken($color_background, 10%)' , 'every other row coloured'
+  = row '$table_border_style'    , 'solid'                          , 'border style'
+  = row '$table_border_size'     , '1px'                            , 'border size'
+  = row '$table_border_color'    , 'darken($color_background, 20%)' , 'border color'
+  = row '$table_head_bg'         , 'darken($color_background, 20%)' , 'table background color'
+  = row '$table_head_font_size'  , 'ms(0)'                          , 'table font size'
+  = row '$table_head_font_color' , '$color_text'                    , 'table font color'
+  = row '$table_head_font_weight', '700'                            , 'table font weight'
+  = row '$table_head_padding'    , 'ms(-2) ms(-2) ms(-1)'           , 'table head padding'
+  = row '$table_row_padding'     , 'ms(-2) ms(-1)'                  , 'table row padding'
+  = row '$table_row_font_size'   , 'ms(-1)'                         , 'table row font size'
+  = row '$table_row_font_color'  , '$color_text'                    , 'table row font color'
+  = row '$table_line_height'     , 'ms(1)'                          , 'table line height'
+  = row '$table_margin_bottom'   , 'ms(2)'                          , 'table margin bottom'
 
+= section :mixins do
+  = row 'table', nil, 'applies default table styling'
 
-%table.listing
-  %tr
-    %td.code $table_bg
-    %td.default 
-      %span $color_background
-    %td.desc table background color
-  %tr
-    %td.code $table_even_row_bg 
-    %td.default 
-      %span darken($color_background, 10%)
-    %td.desc every other row coloured
-  %tr
-    %td.code $table_border_style
-    %td.default 
-      %span solid
-    %td.desc border style
-  %tr
-    %td.code $table_border_size
-    %td.default 
-      %span 1px
-    %td.desc border size
-  %tr
-    %td.code $table_border_color
-    %td.default 
-      %span darken($color_background, 20%)
-    %td.desc border color
-  %tr
-    %td.code $table_head_bg
-    %td.default 
-      %span darken($color_background, 20%)
-    %td.desc table background color
-  %tr
-    %td.code $table_head_font_size
-    %td.default 
-      %span ms(0)
-    %td.desc table font size
-  %tr
-    %td.code $table_head_font_color
-    %td.default 
-      %span $color_text
-    %td.desc table font color
-  %tr
-    %td.code $table_head_font_weight
-    %td.default 
-      %span 700
-    %td.desc table font weight
-  %tr
-    %td.code $table_head_padding
-    %td.default 
-      %span ms(-2) ms(-2) ms(-1)
-    %td.desc table head padding
-  %tr
-    %td.code $table_row_padding
-    %td.default 
-      %span ms(-2) ms(-1)
-    %td.desc table row padding
-  %tr
-    %td.code $table_row_font_size
-    %td.default 
-      %span ms(-1)
-    %td.desc table row font size
-  %tr
-    %td.code $table_row_font_color
-    %td.default 
-      %span $color_text
-    %td.desc table row font color
-  %tr
-    %td.code $table_line_height
-    %td.default 
-      %span ms(1)
-    %td.desc table line height
-  %tr
-    %td.code $table_margin_bottom
-    %td.default
-      %span ms(2)
-    %td.desc table margin bottom
+= section :examples
 
-%a.subtitle{href: '#mixins'}
-  %h3
-    %span Mixins
-    %span.fa.fa-link
+.example
+  = partial 'codes/html/basic_table'
 
-%table.listing
-  %tr
-    %td.code table
-    %td.default
-      %span 24px
-    %td.desc applies default table styling
-
-%a.subtitle{href: '#examples'}
-  %h3
-    %span Examples
-    %span.fa.fa-link
-= partial 'code/basic_table'
-.codes
-  .toggle
-    .button.active{data:{action:'html'}} HTML
-    .button{data:{action:'sass'}} SASS
-    .clear
-  .clear
-  .code.active{data:{action:'html'}}
-    %pre.highlight
-      %code= h partial('code/basic_table')
-  .code{data:{action:'sass'}}
-    %pre.highlight
-      %code= h partial('code/style_basic_table')
- 
+= codes :html, :sass do
+  = code :html, :basic_table
+  = code :sass, :basic_table

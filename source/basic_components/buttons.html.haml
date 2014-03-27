@@ -1,14 +1,19 @@
 .page_heading
   .page_title Buttons
 
-.button
-  Button
-%a.button
-  Anchor
-%button.button{type: 'button'}
-  Button
-%input.button{type: 'submit', value: 'Input Submit'}
+= section :variables do
+  = row '$button_font_weight', 'normal', 'button font weight'
+  = row '$button_font_size'  , 'ms(0)' , 'button font size'
+  = row '$button_padding'    , 'ms(-1)', 'button padding'
 
-%pre.highlight
-  %code
-    = h "<div class='testing'>Testing</div>"
+= section :mixins do
+  = row 'button', '$color_theme', 'button styling'
+
+= section :examples
+
+.example
+  = partial 'codes/html/buttons'
+
+= codes :html, :sass do
+  = code :html, :buttons
+  = code :sass, :buttons

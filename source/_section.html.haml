@@ -1,0 +1,7 @@
+%a.subtitle{href: "##{name}"}
+  %h3
+    %span= name.to_s.capitalize
+    %span.fa.fa-link
+- if content
+  %table.listing
+    = content

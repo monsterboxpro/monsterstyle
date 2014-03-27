@@ -1,0 +1,7 @@
+.codes
+  .toggle
+    - names.each do |name|
+      .button{data:{action:"#{name}"}}= name
+    .clear
+  .clear
+  = content
