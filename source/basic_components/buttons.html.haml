@@ -9,14 +9,11 @@
 = section :mixins do
   = row 'button', '$color_theme', 'button styling'
 
+= section :examples
+
 .example
-  = partial 'code/buttons'
+  = partial 'codes/html/buttons'
 
-.button
-  Button
-%a.button
-  Anchor
-%button.button{type: 'button'}
-  Button
-%input.button{type: 'submit', value: 'Input Submit'}
-
+= codes :html, :sass do
+  = code :html, :buttons
+  = code :sass, :buttons

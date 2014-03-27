@@ -24,13 +24,8 @@
 = section :examples
 
 .example
-  = partial 'codes/basic_table'
+  = partial 'codes/html/basic_table'
 
-.codes
-  .toggle
-    .button.active{data:{action:'html'}} HTML
-    .button{data:{action:'sass'}} SASS
-    .clear
-  .clear
+= codes :html, :sass do
   = code :html, :basic_table
-  = code :sass, :style_basic_table
+  = code :sass, :basic_table
