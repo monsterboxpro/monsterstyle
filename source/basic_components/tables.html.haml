@@ -1,25 +1,25 @@
 .page_heading
   .page_title Tables
 
-= section :variables do
-  = row '$table_bg'              , '$color_background'              , 'table background color'
-  = row '$table_even_row_bg'     , 'darken($color_background, 10%)' , 'every other row coloured'
-  = row '$table_border_style'    , 'solid'                          , 'border style'
-  = row '$table_border_size'     , '1px'                            , 'border size'
-  = row '$table_border_color'    , 'darken($color_background, 20%)' , 'border color'
-  = row '$table_head_bg'         , 'darken($color_background, 20%)' , 'table background color'
-  = row '$table_head_font_size'  , 'ms(0)'                          , 'table font size'
-  = row '$table_head_font_color' , '$color_text'                    , 'table font color'
-  = row '$table_head_font_weight', '700'                            , 'table font weight'
-  = row '$table_head_padding'    , 'ms(-2) ms(-2) ms(-1)'           , 'table head padding'
-  = row '$table_row_padding'     , 'ms(-2) ms(-1)'                  , 'table row padding'
-  = row '$table_row_font_size'   , 'ms(-1)'                         , 'table row font size'
-  = row '$table_row_font_color'  , '$color_text'                    , 'table row font color'
-  = row '$table_line_height'     , 'ms(1)'                          , 'table line height'
-  = row '$table_margin_bottom'   , 'ms(2)'                          , 'table margin bottom'
-
 = section :mixins do
-  = row 'table', nil, 'applies default table styling'
+  = row '+table', nil, 'This applies default table styling.'
+
+= section :variables do
+  = row '$table_bg'              , '$color_background'              , 'This specifies table background color'
+  = row '$table_even_row_bg'     , 'contrast-color($color_background, darken($color_background, 10%), lighten($color_background, 10%), 60%)' , 'Use this for controlling every other row colour.'
+  = row '$table_border_style'    , 'solid'                          , 'For adjusting border style: solid, dotted, etc...'
+  = row '$table_border_size'     , '1px'                            , 'Specifies border thickness.'
+  = row '$table_border_color'    , 'contrast-color($color_background, darken($color_background, 20%), lighten($color_background, 20%), 60%)' , 'This is for controlling border color.'
+  = row '$table_head_bg'         , 'contrast-color($color_background, darken($color_background, 20%), lighten($color_background, 20%), 60%)' , 'This is for controlling table background color.'
+  = row '$table_head_font_size'  , 'ms(0)'                          , 'Specifies table head font size.'
+  = row '$table_head_font_color' , '$color_text'                    , 'Specifies table head font color.'
+  = row '$table_head_font_weight', '700'                            , 'Specifies boldness or lack thereof in the table head.'
+  = row '$table_head_padding'    , 'ms(-2) ms(-2) ms(-1)'           , 'Controller for spacing around the table head text.'
+  = row '$table_row_padding'     , 'ms(-2) ms(-1)'                  , 'Controller for spacing around the table content text.'
+  = row '$table_row_font_size'   , 'ms(-1)'                         , 'Adjustment for the table content font size'
+  = row '$table_row_font_color'  , '$color_text'                    , 'Controls the table content font color'
+  = row '$table_line_height'     , 'ms(1)'                          , 'Specifies the table line height.'
+  = row '$table_margin_bottom'   , 'ms(2)'                          , 'Specify the space below the table.'
 
 = section :examples
 

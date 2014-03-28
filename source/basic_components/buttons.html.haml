@@ -1,13 +1,13 @@
 .page_heading
   .page_title Buttons
 
-= section :variables do
-  = row '$button_font_weight', 'normal', 'button font weight'
-  = row '$button_font_size'  , 'ms(0)' , 'button font size'
-  = row '$button_padding'    , 'ms(-1)', 'button padding'
-
 = section :mixins do
-  = row 'button', '$color_theme', 'button styling'
+  = row '+button', '$color_theme', 'Specify the color for the button. The built in global scheme color variables are $color_primary, $color-secondary, $color_tertiary, $color_quadrary.'
+
+= section :variables do
+  = row '$button_font_weight', 'normal', 'Use this to specify boldness or lack thereof.'
+  = row '$button_font_size'  , 'ms(0)' , 'This specifies font size'
+  = row '$button_padding'    , 'ms(-1)', 'This specifies spacing around the text in the button.'
 
 = section :examples
 

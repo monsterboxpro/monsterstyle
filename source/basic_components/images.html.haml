@@ -1,5 +1,28 @@
 .page_heading
   .page_title Images
+
+= section :mixins do
+  = row '+image_rounded'         , '$image_height, $image_width', 'Image with rounded corners. Set the $image_height, and $image_width to specify size.'
+  = row '+image_rounded_center'  , '$image_height, $image_width', 'Centered image with rounded corners. Set the $image_height, and $image_width to specify size.'
+  = row '+image_circle'          , '$image_diameter'            , 'Circle image styling. Set the $image_diameter to specify size.'
+  = row '+image_circle_center'   , '$image_diameter'            , 'Centered circle image styling. Set the $image_diameter to specify size.'
+  = row '+image_thumbnail'       , '$image_height, $image_width', 'Thumbnail image styling. Set the $image_height, and $image_width to specify size.'
+  = row '+image_thumbnail_center', '$image_height, $image_width', 'Centered thumbnail image styling. Set the $image_height, and $image_width to specify size.'
+
+= section :variables do
+  = row '$image_radius'                            , 'ms(1)'              , 'The corner rounding radius setting for +image_rounded and +image_rounded_centered.'
+  = row '$image_thumbnail_padding'                 , 'ms(-2)'             , 'This is the spacing between the image and the border'
+  = row '$image_border'                            , '1px solid contrast-color($color_background, darken($color_background, 45%), lighten($color_background, 50%), 60%)', 'This specifies the border styling'
+  = row '$image_margin'                            , 'ms(1)'              , 'This specifies the distance the image keeps from surrounding objects.'
+  = row '$image_large, $image_medium, $image_small', 'ms(7), ms(5), ms(4)', 'These are not inherently used, they are provided as easy sizing options that conform to your scheme choice modular scale.'
+
+= section :examples
+
 .example
   = partial 'codes/html/images'
+
+= codes :html, :sass do
+  = code :html, :images
+  = code :sass, :images
+
 

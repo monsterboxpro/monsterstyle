@@ -1,12 +1,33 @@
-$color_primary    : #428bca
-$color_success    : #5cb85c
-$color_info       : #5bc0de
-$color_warning    : #f0ad4e
-$color_danger     : #d9534f
-$color_disabled   : rgb(200, 200, 200)
+//This sets the primary color for the whole scheme
+$cs-primary : rgb(66, 139, 160)
+//This sets the scheme style: mono, complement, triad, tetrad, analogic, accented-analogic
+$cs-scheme : mono
+//Amount of hue adjustment in schemes.
+$cs-hue-offset : 20
+//Amount of brightness adjustment in schemes.
+$cs-brightness-offset : 0
+//rgb, ryb
+$cs-color-model : rgb
+
 $color_background : rgb(255, 255, 255)
 $color_text       : rgb(0, 0, 0)
-$color_comp       : adjust-hue($color_primary, 180%)
+
+$color_primary   : cs-primary()
+$color_secondary : darken(cs-secondary(), 10%)
+$color_tertiary  : cs-tertiary()
+$color_quadrary  : cs-quadrary()
+
+
+
+//$color_primary    : #428bca
+//$color_success    : #5cb85c
+//$color_info       : #5bc0de
+//$color_warning    : #f0ad4e
+//$color_danger     : #d9534f
+//$color_disabled   : rgb(200, 200, 200)
+//$color_background : rgb(255, 255, 255)
+//$color_text       : rgb(0, 0, 0)
+//$color_comp       : adjust-hue($color_primary, 180%)
 
 $ms-base: 16px
 $ms-ratio: $golden
@@ -44,22 +65,22 @@ $table_line_height      : ms(1)
 
 $table_margin_bottom    : ms(2)
 
-$form_font_size : ms(0)
-$form_padding : ms(-2) ms(-1.5)
-$form_border : 1px solid contrast-color($color_background, darken($color_background, 45%), lighten($color_background, 50%), 60%)
+$form_font_size          : ms(0)
+$form_padding            : ms(-2) ms(-1.5)
+$form_border             : 1px solid contrast-color($color_background, darken($color_background, 45%), lighten($color_background, 50%), 60%)
 $form_selector_font_size : ms(-0.5)
-$form_margin_right : ms(0)
+$form_margin_right       : ms(0)
 
 $button_group_radius : ms(-3)
 
 $input_group_height : ms(1.5)
 
 
-$image_large : ms(7)
+$image_large  : ms(7)
 $image_medium : ms(5)
-$image_small : ms(4)
+$image_small  : ms(4)
 
-$image_radius : ms(1)
+$image_radius            : ms(1)
 $image_thumbnail_padding : ms(-2)
-$image_border : 1px solid contrast-color($color_background, darken($color_background, 45%), lighten($color_background, 50%), 60%)
-$image_margin : ms(1)
+$image_border            : 1px solid contrast-color($color_background, darken($color_background, 45%), lighten($color_background, 50%), 60%)
+$image_margin            : ms(1)

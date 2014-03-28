@@ -1,12 +1,6 @@
 .page_heading
   .page_title Forms
 
-= section :variables do
-  = row '$form_font_size'         , 'ms(0)', 'form font size'
-  = row '$form_padding'           , '6px 7px', 'form padding'
-  = row '$form_border'            , '1px solid darken($color_background, 40%)', 'form border'
-  = row '$form_selector_font_size', 'ms(-0.5)', 'form selector font size'
-
 = section :mixins do
   = row 'form_field'         , nil, 'styling for the field that wraps the actual field input'
   = row 'form_label'         , nil, 'styling for label'
@@ -15,6 +9,12 @@
   = row 'form_checkbox'      , nil, 'styling for input checkbox'
   = row 'form_textarea'      , nil, 'styling for textarea'
   = row 'form_radio_button'  , nil, 'styling for radio button'
+
+= section :variables do
+  = row '$form_font_size'         , 'ms(0)', 'Controls the form font size.'
+  = row '$form_padding'           , '6px 7px', 'Adjusts the spacing inside form items.'
+  = row '$form_border'            , '1px solid darken($color_background, 40%)', 'Controls the details for the form item borders.'
+  = row '$form_selector_font_size', 'ms(-0.5)', 'Specifies the size of checkboxes and radio buttons.'
 
 = section :examples
 
