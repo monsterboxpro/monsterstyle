@@ -11,7 +11,7 @@ $color_comp       : adjust-hue($color_primary, 180%)
 $ms-base: 16px
 $ms-ratio: $golden
 
-$global_radius: 2px
+$global_radius: ms(-4)
 
 $font_family_sans_serif : 'Open Sans', Helvetica, Arial, sans-serif
 $font_family_serif      : Georgia, "Times New Roman", Times, serif
@@ -25,13 +25,13 @@ $button_font_size   : ms(0)
 $button_padding     : ms(-1)
 
 $table_bg               : $color_background
-$table_even_row_bg      : darken($color_background, 10%)
+$table_even_row_bg      : contrast-color($color_background, darken($color_background, 10%), lighten($color_background, 10%), 60%)
 
 $table_border_style     : solid
 $table_border_size      : 1px
-$table_border_color     : darken($color_background, 20%)
+$table_border_color     : contrast-color($color_background, darken($color_background, 20%), lighten($color_background, 20%), 60%)
 
-$table_head_bg          : darken($color_background, 20%)
+$table_head_bg          : contrast-color($color_background, darken($color_background, 20%), lighten($color_background, 20%), 60%)
 $table_head_font_size   : ms(0)
 $table_head_font_color  : $color_text
 $table_head_font_weight : 700
@@ -45,10 +45,21 @@ $table_line_height      : ms(1)
 $table_margin_bottom    : ms(2)
 
 $form_font_size : ms(0)
-$form_padding : 6px 7px
-$form_border : 1px solid darken($color_background, 40%)
+$form_padding : ms(-2) ms(-1.5)
+$form_border : 1px solid contrast-color($color_background, darken($color_background, 45%), lighten($color_background, 50%), 60%)
 $form_selector_font_size : ms(-0.5)
+$form_margin_right : ms(0)
 
-$button_group_radius : 3px
+$button_group_radius : ms(-3)
 
 $input_group_height : ms(1.5)
+
+
+$image_large : ms(7)
+$image_medium : ms(5)
+$image_small : ms(4)
+
+$image_radius : ms(1)
+$image_thumbnail_padding : ms(-2)
+$image_border : 1px solid contrast-color($color_background, darken($color_background, 45%), lighten($color_background, 50%), 60%)
+$image_margin : ms(1)

@@ -1,0 +1,42 @@
+= image_rounded($image_height, $image_width)
+  +border-radius($image_radius)
+  :height $image_height
+  :width $image_width
+  :margin $image_margin
+
+= image_rounded_center($image_height, $image_width)
+  +border-radius($image_radius)
+  :height $image_height
+  :width $image_width
+  :display block
+  :margin $image_margin auto
+
+= image_circle($image_diameter)
+  $image_round : $image_diameter / 2
+  :height $image_diameter
+  :width $image_diameter
+  +border-radius($image_round)
+  :margin $image_margin
+
+= image_circle_center($image_diameter)
+  $image_round : $image_diameter / 2
+  :height $image_diameter
+  :width $image_diameter
+  +border-radius($image_round)
+  :display block
+  :margin $image_margin auto
+
+= image_thumbnail($image_height, $image_width)
+  :height $image_height
+  :width $image_width
+  :padding $image_thumbnail_padding
+  :border $image_border
+  :margin $image_margin
+
+= image_thumbnail_center($image_height, $image_width)
+  :height $image_height
+  :width $image_width
+  :padding $image_thumbnail_padding
+  :border $image_border
+  :display block
+  :margin $image_margin auto
