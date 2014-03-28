@@ -47,3 +47,59 @@
     &:not(:first-child)
       :margin 
         :left $form_margin_right
+
+= form_inline_box($inline_form_width, $color_theme, $form_color)
+  $selector_background : contrast-color($form_color, darken($form_color, 45%), lighten($form_color, 60%), 60%)
+  :width $inline_form_width
+  :display block
+  :margin ms(1) auto
+  :background darken($color_background, 10%)
+  :padding ms(1)
+  .inline_text_field
+    :padding
+      :bottom ms(-1)
+    input
+      :width 100%
+      :outline none
+      :border $form_border
+      :padding $form_padding
+      :font-size $form_font_size
+      +box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.18))
+      :margin
+        :right $form_margin_right
+      :display block
+      :margin 0 auto
+  .inline_textarea
+    :padding
+      :bottom ms(-1)
+    input
+      :outline none
+      :border $form_border
+      :padding $form_padding
+      :font-size $form_font_size
+      +box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.18))
+      :height ms(3)
+      :width 100%
+      :word-wrap break-word
+  .inline_selector
+    :background darken($color_background, 2%)
+    :padding ms(1)
+    :margin
+      :bottom ms(-1)
+    :display block
+    input
+      :font-size $form_selector_font_size
+      :width ms(2)
+      :font-size $form_font_size
+      :height ms(2)
+      //:float left
+      .label2
+        :line-height ms(2)
+        :vertical-align middle
+      //&:not(:first-child)
+        :margin 
+          :left $form_margin_right
+  button
+    +button($color_theme)
+    :display block
+    :margin ms(-1) auto

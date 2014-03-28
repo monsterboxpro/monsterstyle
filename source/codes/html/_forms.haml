@@ -8,7 +8,7 @@
 .textarea
   .label
     Text Area
-  %input{type: 'textarea'}
+  %input{type: 'textarea', wrap: 'hard'}
 .clear
 .label
   Checkboxes
@@ -25,3 +25,36 @@
     One
   %input{type: 'radio'}
     Two
+.form_inline_box
+  .inline_text_field
+    .label
+      Text Field
+    %input{type: 'text'}
+  .clear
+  .inline_textarea
+    .label
+      Text Area
+    %input{type: 'textarea', wrap: 'hard'}
+  .clear
+  .label
+    Checkboxes
+  .inline_selector
+    %input{type: 'checkbox'}
+      Option 1
+    %input{type: 'checkbox'}
+      Option 2
+  .clear
+  .label
+    Radio Buttons
+  .inline_selector
+    %input{type: 'radio'}
+      Male
+    .clear
+    %input{type: 'radio'}
+      Female
+    .clear
+    %input{type: 'radio'}
+      Other, and it requires a rather long description so don't ask me about it.
+  %button{type: 'button'}
+    Submit
+
