@@ -1,10 +1,14 @@
 .page_heading
   .page_title Button Groups
 
-= section :variables do
-  = row 'button_group_radius', '3px', 'button group radius'
 = section :mixins do
-  = row 'button_group', '$color_theme', 'button group styling'
+  = row '+button_group', '$color_theme', 'Applies the button group styling.'
+
+= section :variables do
+  = row '$button_group_radius', '3px'   , 'Controls the button group rounding amount.'
+  = row '$button_font_weight' , 'normal', 'Use this to specify boldness or lack thereof. *shared with buttons*'
+  = row '$button_font_size'   , 'ms(0)' , 'This specifies font size. *shared with buttons*'
+  = row '$button_padding'     , 'ms(-1)', 'This specifies spacing around the text in the button. *shared with buttons*'
 
 = section :examples
 

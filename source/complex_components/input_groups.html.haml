@@ -1,11 +1,18 @@
 .page_heading
   .page_title Input Groups
 
-= section :variables do
-  = row '$something', 'real_good', 'aight aight'
-
 = section :mixins do
-  = row 'something', 'real_good', 'aight aight'
+  = row '+input_group', '$color_theme', 'Specify the colour you want for the backround of buttons, checkboxes and radio buttons. It is recommended that you use the built in colour scheme variables: $color_primary, $color_secondary, $color_tertiary, $color_quadrary.'
+
+= section :variables do
+  = row '$input_group_height'     , 'ms(1.5)'                                 , 'Controls the overall height of the group.'
+  = row '$form_font_size'         , 'ms(0)'                                   , 'Controls the form font size. *shared with forms*'
+  = row '$form_padding'           , '6px 7px'                                 , 'Adjusts the spacing inside form items. *shared with forms*'
+  = row '$form_border'            , '1px solid darken($color_background, 40%)', 'Controls the details for the form item borders. *shared with forms*'
+  = row '$form_selector_font_size', 'ms(-0.5)'                                , 'Specifies the size of checkboxes and radio buttons. *shared with forms*'
+  = row '$button_font_weight'     , 'normal'                                  , 'Use this to specify boldness or lack thereof. *shared with buttons*'
+  = row '$button_font_size'       , 'ms(0)'                                   , 'This specifies font size. *shared with buttons*'
+  = row '$button_padding'         , 'ms(-1)'                                  , 'This specifies spacing around the text in the button. *shared with buttons*'
 
 = section :examples
 
