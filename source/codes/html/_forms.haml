@@ -26,6 +26,8 @@
   %input{type: 'radio'}
     Two
 .form_inline_box
+  .inline_header
+    Inline Form Title
   .inline_text_field
     .label
       Text Field
@@ -41,20 +43,25 @@
   .inline_selector
     %input{type: 'checkbox'}
       Option 1
+    .clear
     %input{type: 'checkbox'}
       Option 2
+    .clear
   .clear
   .label
     Radio Buttons
   .inline_selector
     %input{type: 'radio'}
+    %label
       Male
     .clear
     %input{type: 'radio'}
+    %label  
       Female
     .clear
     %input{type: 'radio'}
-      Other, and it requires a rather long description so don't ask me about it.
+    %label  
+      Other, and it requires a rather long description.
+    .clear
   %button{type: 'button'}
     Submit
-

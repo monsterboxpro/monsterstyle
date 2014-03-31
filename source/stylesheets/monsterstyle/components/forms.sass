@@ -35,6 +35,7 @@
   +box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.18))
   :width 100%
   :height ms(3)
+  :word-wrap break-word
 
 = form_radio_button
   :margin
@@ -55,6 +56,13 @@
   :margin ms(1) auto
   :background darken($color_background, 10%)
   :padding ms(1)
+  .inline_header
+    :text-align center
+    :margin
+      :bottom ms(0)
+    :font-size ms(1)
+    :border
+      :bottom 1px dotted darken($color_background, 40%)
   .inline_text_field
     :padding
       :bottom ms(-1)
@@ -72,6 +80,7 @@
   .inline_textarea
     :padding
       :bottom ms(-1)
+    :word-wrap break-word
     input
       :outline none
       :border $form_border
@@ -83,23 +92,13 @@
       :word-wrap break-word
   .inline_selector
     :background darken($color_background, 2%)
-    :padding ms(1)
+    :display inline-block
+    :font-size $form_selector_font_size
+    :width 100%
+    :padding ms(-1)
     :margin
       :bottom ms(-1)
-    :display block
-    input
-      :font-size $form_selector_font_size
-      :width ms(2)
-      :font-size $form_font_size
-      :height ms(2)
-      //:float left
-      .label2
-        :line-height ms(2)
-        :vertical-align middle
-      //&:not(:first-child)
-        :margin 
-          :left $form_margin_right
   button
     +button($color_theme)
     :display block
-    :margin ms(-1) auto
+    :margin ms(0) 0 0 auto
