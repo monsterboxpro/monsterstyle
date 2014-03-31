@@ -1,3 +1,4 @@
+@import "compass/css3/hyphenation"
 = form_field
   :margin
     :bottom ms(-1)
@@ -15,6 +16,7 @@
   :float $default-float
   :margin
     :right $form_margin_right
+    :bottom $form_element_spacing
 
 
 = form_password_field
@@ -23,6 +25,8 @@
 = form_checkbox
   :display inline-block
   :font-size $form_selector_font_size
+  :margin 
+    :bottom $form_element_spacing
   &:not(:first-child)
     :margin 
       :left $form_margin_right
@@ -34,14 +38,17 @@
   :font-size $form_font_size
   +box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.18))
   :width 100%
-  :height ms(3)
+  :height $form_textarea_height
   :word-wrap break-word
+  +hyphenation
+  :margin
+    :bottom $form_element_spacing
 
 = form_radio_button
-  :margin
-    :right ms(-2)
-    :top ms(-4)
+  :margin 0 $form_element_spacing 0 ms(-4)
   :display inline-block
+  :margin
+    :bottom $form_element_spacing
   input
     :margin 0
     :font-size $form_selector_font_size
@@ -49,23 +56,23 @@
       :margin 
         :left $form_margin_right
 
-= form_inline_box($inline_form_width, $color_theme, $form_color)
+= form_inline_box($inline_form_width, $button_color_theme, $form_color)
   $selector_background : contrast-color($form_color, darken($form_color, 45%), lighten($form_color, 60%), 60%)
   :width $inline_form_width
   :display block
-  :margin ms(1) auto
-  :background darken($color_background, 10%)
-  :padding ms(1)
+  :margin ms(1) $form_inline_margin_position
+  :background $form_color
+  :padding $form_inline_padding
   .inline_header
     :text-align center
     :margin
-      :bottom ms(0)
-    :font-size ms(1)
+      :bottom $form_element_spacing
+    :font-size $form_header_font_size
     :border
-      :bottom 1px dotted darken($color_background, 40%)
+      :bottom 1px dotted darken($form_color, 40%)
   .inline_text_field
-    :padding
-      :bottom ms(-1)
+    :margin
+      :bottom $form_element_spacing
     input
       :width 100%
       :outline none
@@ -78,27 +85,28 @@
       :display block
       :margin 0 auto
   .inline_textarea
-    :padding
-      :bottom ms(-1)
-    :word-wrap break-word
+    :margin
+      :bottom $form_element_spacing
     input
       :outline none
       :border $form_border
       :padding $form_padding
       :font-size $form_font_size
       +box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.18))
-      :height ms(3)
+      :height $form_textarea_height
       :width 100%
-      :word-wrap break-word
+      +hyphenation
   .inline_selector
-    :background darken($color_background, 2%)
+    :background lighten($form_color, 8%)
     :display inline-block
     :font-size $form_selector_font_size
     :width 100%
     :padding ms(-1)
     :margin
-      :bottom ms(-1)
+      :bottom $form_element_spacing
+    input
+      //+page-break-after
   button
-    +button($color_theme)
+    +button($button_color_theme)
     :display block
     :margin ms(0) 0 0 auto

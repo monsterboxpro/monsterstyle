@@ -2,19 +2,25 @@
   .page_title Forms
 
 = section :mixins do
-  = row 'form_field'         , nil, 'styling for the field that wraps the actual field input'
-  = row 'form_label'         , nil, 'styling for label'
-  = row 'form_text_field'    , nil, 'styling for input text'
-  = row 'form_password_field', nil, 'styling for input password'
-  = row 'form_checkbox'      , nil, 'styling for input checkbox'
-  = row 'form_textarea'      , nil, 'styling for textarea'
-  = row 'form_radio_button'  , nil, 'styling for radio button'
-
+  = row '+form_field'         , nil, 'styling for the field that wraps the actual field input'
+  = row '+form_label'         , nil, 'styling for label'
+  = row '+form_text_field'    , nil, 'styling for input text'
+  = row '+form_password_field', nil, 'styling for input password'
+  = row '+form_checkbox'      , nil, 'styling for input checkbox'
+  = row '+form_textarea'      , nil, 'styling for textarea'
+  = row '+form_radio_button'  , nil, 'styling for radio button'
+  = row '+form_inline_box'    , '$inline_form_width, $button_color_theme, $form_color', 'Use $inline_form_width to set the widthof your form, use $button_color_theme to set the button colours, and use $form_color to set the background colour theme of your form'
 = section :variables do
   = row '$form_font_size'         , 'ms(0)', 'Controls the form font size.'
   = row '$form_padding'           , '6px 7px', 'Adjusts the spacing inside form items.'
   = row '$form_border'            , '1px solid darken($color_background, 40%)', 'Controls the details for the form item borders.'
   = row '$form_selector_font_size', 'ms(-0.5)', 'Specifies the size of checkboxes and radio buttons.'
+  = row '$form_margin_right'      , 'ms(0)', 'Adjusts right magrin spacing.'
+  = row '$form_textarea_height'   , 'ms(3)', 'Controls height of the textarea.'
+  = row '$form_header_font_size'  , 'ms(0)', 'Controls the form header font size.'
+  = row '$form_element_spacing'   , 'ms(-1)', 'Specifies the spacing between elements.'
+  = row '$form_inline_padding'    , 'ms(1)', 'Adjusts the spacing around the elements in a form.'
+  = row '$form_inline_margin_position', 'auto', 'This will adjust the margin on the left and right of the element, "auto" is centered, but if you want to float it to the right or the left in your styling then you will have to change this value.'
 
 = section :examples
 
