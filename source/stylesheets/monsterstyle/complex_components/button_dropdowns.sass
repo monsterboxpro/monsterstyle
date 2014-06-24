@@ -1,22 +1,29 @@
-=button_dropdown($color_theme, $color_back)
-  .button
+=button_dropdown($color_theme, $color_back, $width)
+  :width $width
+  span
     +button($color_theme)
+    :width $width
+  li
+    :display none
+    :background $color_back
+    :color $color_text
+    :cursor pointer
+    :text-align center
+    :border 1px lighten($color_theme, 40%) solid
+      :top 0
+  .dropdown_items
+    :width $width - 4px
+    :margin
+      :left 2px
+  &:hover
+    span
+      :background lighten($color_theme, 20%)
     li
-      :display none
-      :background $color_back
-      :color $color_text
-      :cursor pointer
-      &:nth-child(2)
-        :margin
-          :top $button_padding
-    &:hover
-      
-      span
-        :padding
-          :bottom $button_padding - ms(-3)
-        :background lighten($color_theme, 20%)
-      li
-        :display block
-        :padding ms(-3)
-      li a
-        :text-decoration none
+      :display block
+      :padding ms(-3)
+      &:hover
+        :background lighten($color_theme, 40%)
+    a
+      :text-decoration none
+      :width $width - ms(-3)
+
