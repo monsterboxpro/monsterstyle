@@ -1,0 +1,22 @@
+=panel($color_theme)
+  display: block
+  margin: ms(0)
+  border-radius: 2px
+  border: 1px solid contrast-color($color_theme, lighten($color_theme, 20%), darken($color_theme, 20%), 10%)
+  .panel_head
+    $selector_background : contrast-color($color_theme, darken($color_theme, 45%), lighten($color_theme, 60%), 60%)
+    background: $color_theme
+    padding: ms(-1)
+    .panel_title
+      font-size: ms(1)
+      color: contrast-color($color_theme, darken($color_theme, 45%), lighten($color_theme, 60%), 60%)
+  .panel_body
+    padding: ms(-1)
+  .panel_foot
+    overflow: auto
+    padding: ms(-1)
+    background: contrast-color($color_theme, lighten($color_theme, 40%), darken($color_theme, 20%), 30%)
+    width: 100%
+
+    .button
+      float: right

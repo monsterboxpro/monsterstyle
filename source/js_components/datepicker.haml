@@ -1,0 +1,19 @@
+.page_heading
+  .page_title Datepicker
+
+
+= section :examples
+
+.example
+  = partial 'codes/html/datepicker'
+  .clear
+
+= codes :html, :sass do
+  = code :html, :button_group
+  = code :sass, :button_group
+
+= section :mixins do
+  = row '+button_group', '$color_theme', 'Applies the button group styling.'
+
+= section :variables do
+  = row '$button_group_radius', '3px'   , 'Controls the button group rounding amount.'

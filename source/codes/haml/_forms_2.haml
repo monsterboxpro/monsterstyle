@@ -1,0 +1,39 @@
+.form_inline_box
+  .inline_header
+    Inline Form Title
+  .inline_text_field
+    .label
+      Text Field
+    %input{type: 'text'}
+  .clear
+  .inline_textarea
+    .label
+      Text Area
+    %input{type: 'textarea', wrap: 'hard'}
+  .clear
+  .label
+    Checkboxes
+  .inline_selector
+    %input{type: 'checkbox'}
+      Option 1
+    %input{type: 'checkbox'}
+      Option 2
+    .clear
+  .clear
+  .label
+    Radio Buttons
+  .inline_selector
+    %input{type: 'radio'}
+    %label
+      Male
+    .clear
+    %input{type: 'radio'}
+    %label
+      Female
+    .clear
+    %input{type: 'radio'}
+    %label
+      Other, and it requires a rather long description.
+    .clear
+  %button{type: 'button'}
+    Submit

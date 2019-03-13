@@ -1,2 +1,23 @@
 .page_heading
   .page_title Panels
+
+
+
+= section :examples
+
+.example
+  = partial 'codes/html/panels'
+  .clear
+
+= codes :html, :sass do
+  = code :html, :panels
+  = code :sass, :panels
+
+= section :mixins do
+  = row '+panel', '$color_theme', 'Applies the button group styling.'
+
+= section :variables do
+  = row '$button_group_radius', '3px'   , 'Controls the button group rounding amount.'
+  = row '$button_font_weight' , 'normal', 'Use this to specify boldness or lack thereof. *shared with buttons*'
+  = row '$button_font_size'   , 'ms(0)' , 'This specifies font size. *shared with buttons*'
+  = row '$button_padding'     , 'ms(-1)', 'This specifies spacing around the text in the button. *shared with buttons*'

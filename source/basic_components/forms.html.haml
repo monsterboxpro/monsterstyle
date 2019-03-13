@@ -1,6 +1,25 @@
 .page_heading
   .page_title Forms
 
+
+= section :examples
+
+-# Basic Forms
+.example
+  = partial 'codes/html/forms'
+
+= codes :html, :haml do
+  = code :html, :forms
+  = code :haml, :forms
+
+-# Vertical Panel Forms
+.example
+  = partial 'codes/html/forms_2'
+
+= codes :html, :haml do
+  = code :html, :forms_2
+  = code :haml, :forms_2
+
 = section :mixins do
   = row '+form_field'         , nil, 'styling for the field that wraps the actual field input'
   = row '+form_label'         , nil, 'styling for label'
@@ -21,12 +40,3 @@
   = row '$form_element_spacing'   , 'ms(-1)', 'Specifies the spacing between elements.'
   = row '$form_inline_padding'    , 'ms(1)', 'Adjusts the spacing around the elements in a form.'
   = row '$form_inline_margin_position', 'auto', 'This will adjust the margin on the left and right of the element, "auto" is centered, but if you want to float it to the right or the left in your styling then you will have to change this value.'
-
-= section :examples
-
-.example
-  = partial 'codes/html/forms'
-
-= codes :html, :sass do
-  = code :html, :forms
-  = code :sass, :forms

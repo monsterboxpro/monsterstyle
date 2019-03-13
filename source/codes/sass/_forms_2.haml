@@ -1,0 +1,16 @@
+:plain
+  .label
+    +form_label
+  .text_field
+    input
+      +form_text_field
+    button
+      +button($color_primary)
+  .textarea input
+    +form_textarea
+  .checkbox input
+    +form_checkbox
+  .radio_button
+    +form_radio_button
+  .form_inline_box
+    +form_inline_box(500px, $color_primary, darken($color_background, 10%))

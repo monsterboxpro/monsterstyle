@@ -1,0 +1,15 @@
+.page_heading
+  .page_title Notifications
+
+= section :examples
+
+.example
+  = partial 'codes/html/notifications'
+
+= codes :html, :haml, :sass do
+  = code :html, :notifications
+  = code :haml, :notifications
+  = code :sass, :notifications
+
+= section :mixins do
+  = row '+notification', '$color_theme', 'Specify the color for the border. The font color and background are generated as contrasted versions of the picked colour.'

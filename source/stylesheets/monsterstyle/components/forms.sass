@@ -25,10 +25,10 @@
 = form_checkbox
   :display inline-block
   :font-size $form_selector_font_size
-  :margin 
+  :margin
     :bottom $form_element_spacing
   &:not(:first-child)
-    :margin 
+    :margin
       :left $form_margin_right
 
 = form_textarea
@@ -53,7 +53,7 @@
     :margin 0
     :font-size $form_selector_font_size
     &:not(:first-child)
-      :margin 
+      :margin
         :left $form_margin_right
 
 = form_inline_box($inline_form_width, $button_color_theme, $form_color)
@@ -63,6 +63,8 @@
   :margin ms(1) $form_inline_margin_position
   :background $form_color
   :padding $form_inline_padding
+  border-radius: 2px
+  border: 1px solid darken($form_color, 10%)
   .inline_header
     :text-align center
     :margin

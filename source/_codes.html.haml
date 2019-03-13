@@ -1,7 +1,8 @@
 .codes
   .toggle
-    - names.each do |name|
-      .button{data:{action:"#{name}"}}= name
+    .button_group
+      - names.each do |name|
+        .button{data:{action:"#{name}"}}= name
     .clear
   .clear
   = content

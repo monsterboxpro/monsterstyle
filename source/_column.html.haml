@@ -1,5 +1,5 @@
 .column
-  .toggle
+  .toggle.button_group
     .button.active{data:{action:'toc'}} TOC
     .button{data:{action:'search'}} Search
     .clear
@@ -11,12 +11,17 @@
     .group
       .title Configuration
       %a.variables{href: '/configuration/variables/'} Variables
+      %a.class_assignments{href: '/configuration/class_assignments/'} Class Assignments
+    .group
+      .title Page Layout
+      %a.columns{href: '/page_layout/columns/'}   Columns
     .group
       .title Basic Components
       %a.forms{href: '/basic_components/forms/'}   Forms
       %a.buttons{href: '/basic_components/buttons/'} Buttons
       %a.tables{href: '/basic_components/tables/'}  Tables
       %a.images{href: '/basic_components/images/'} Images
+      %a.notifications{href: '/basic_components/notifications/'} Notifications
     .group
       .title Complex Components
       %a.dropdowns{href: '/complex_components/dropdowns/'} Dropdowns
@@ -25,6 +30,9 @@
       %a.input_groups{href: '/complex_components/input_groups/'} Input groups
       %a.navs{href: '/complex_components/navs/'} Navs
       %a.panels{href: '/complex_components/panels/'} Panels
+    .group
+      .title JS Req. Components
+      %a.datepicker{href: '/js_components/datepicker/'} Datepicker
     .group
       .title Examples
   .section.search{data:{action:'search'}}
