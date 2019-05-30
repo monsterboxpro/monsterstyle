@@ -1,4 +1,6 @@
 Time.zone = 'Eastern Time (US & Canada)'
+require "lib/build_gem"
+helpers GemBuilder
 
 set :css_dir   , 'stylesheets'
 set :js_dir    , 'javascripts'
@@ -10,13 +12,15 @@ activate :directory_indexes
 
 activate :deploy do |deploy|
   deploy.method   = :ftp
-  deploy.host     = 'ftp.monsterboxpro.com'
+  deploy.host     = 'ftp.monsterstyle.dev'
   deploy.path     = '/public_html'
-  deploy.user     = 'monsterb'
-  deploy.password = 'scroll_SMB1'
+  deploy.user     = 'brizzlefeller'
+  deploy.password = '7sdh0#*hf7u2#G'
 end
 
 configure :build do
+  binding.pry
+  build_monsterstyle_gem
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
